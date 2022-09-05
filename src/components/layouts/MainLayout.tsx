@@ -18,7 +18,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
           }}
           className="text-center cursor-pointer absolute bg-transparent bottom-1"
         >
-          created by <span className="font-bold">@adriancoll</span> -
+          created by <span className="font-bold">@adriancoll 💻</span> -
           devChallenges.io
         </a>
       </footer>
