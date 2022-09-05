@@ -11,9 +11,9 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "cloudinary": "^1.31.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
