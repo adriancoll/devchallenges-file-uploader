@@ -8,7 +8,9 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
       </main>
       <footer>
         <a
-          href="https://adriancoll.dev"
+          aria-label="Contect me!"
+          title="📩 Contact me by email!"
+          href="mailto:contact@adriancoll.dev"
           target="_blank"
           rel="noreferrer noopener"
           style={{
