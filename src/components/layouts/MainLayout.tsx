@@ -4,7 +4,16 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <main className="flex items-center justify-center h-screen w-full bg-gray-100">
-        {children}
+        <div
+          style={{
+            boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+            lineHeight: "27px",
+            color: "#4F4F4F",
+          }}
+          className=" text-center px-8 py-9 bg-white flex flex-col rounded-xl items-center justify-between gap-6"
+        >
+          {children}
+        </div>
       </main>
       <footer>
         <a

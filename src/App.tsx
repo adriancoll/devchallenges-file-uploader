@@ -1,10 +1,9 @@
 import { MainLayout } from "./components/layouts";
 import { FileUploader } from "./components/ui";
+import { Navigation } from "./router";
 
 const App = () => (
-  <MainLayout>
-    <FileUploader />
-  </MainLayout>
+    <Navigation />
 );
 
 export default App;
