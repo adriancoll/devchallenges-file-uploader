@@ -8,10 +8,14 @@ export const Navigation = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />}>
-        {
-          ROUTES.map(route => )
-        }
-        <Route path="loading" element={<LoadingPage />} />
+        {ROUTES.map(({ path, component, key }) => (
+          <Route
+            path={path}
+            key={key}
+            element={(props) => <component {...props} />}
+          />
+        ))}
+
         <Route path="success" element={<SuccessPage />} />
       </Route>
     </Routes>
