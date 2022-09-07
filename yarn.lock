@@ -540,7 +540,7 @@ cloudinary-core@^2.10.2:
 
 cloudinary@^1.31.0:
   version "1.31.0"
-  resolved "https://registry.npmjs.org/cloudinary/-/cloudinary-1.31.0.tgz"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.31.0.tgz#f43baa266d7c86cbaed8ab733aca6b80a114b671"
   integrity sha512-+A/x0gsmzBya4KPabY6Vmj1d1hxjI2kEhbKy52bahLFhDc5xiMhClWbzurYfFA83OUbwLQGZpjnW+Fwu1Kq3kQ==
   dependencies:
     cloudinary-core "^2.10.2"
