@@ -17,9 +17,9 @@ export const useUploadImage = () => {
 
       const { secure_url } = await cloudinaryUploadImage(file);
 
-      console.log({secure_url});
+      console.log({ secure_url });
 
-      setTimeout(() => navigate("/success"), 500);
+      setTimeout(() => navigate("/success", { replace: true }), 250);
 
       setCurrentImage(secure_url);
     } catch (err) {
