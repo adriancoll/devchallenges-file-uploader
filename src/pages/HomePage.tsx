@@ -3,7 +3,7 @@ import { FileUploader } from "../components/ui";
 
 export const HomePage = () => {
   return (
-    <MainLayout>
+    <MainLayout wrapperClassName="items-center">
       <FileUploader />
     </MainLayout>
   );

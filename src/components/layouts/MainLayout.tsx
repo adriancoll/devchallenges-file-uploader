@@ -1,6 +1,10 @@
 import { FC, PropsWithChildren } from "react";
 
-export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
+interface Props extends PropsWithChildren {
+  wrapperClassName?: string
+}
+
+export const MainLayout: FC<Props> = ({ children, wrapperClassName = "" }) => {
   return (
     <>
       <main className="flex items-center justify-center h-screen w-full bg-gray-100">
@@ -10,7 +14,7 @@ export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
             lineHeight: "27px",
             color: "#4F4F4F",
           }}
-          className=" text-center px-8 py-9 bg-white flex flex-col rounded-xl items-center justify-between gap-6"
+          className={`px-8 min-w-[340px] py-9 bg-white flex flex-col rounded-xl justify-between gap-6 ${wrapperClassName}`}
         >
           {children}
         </div>
