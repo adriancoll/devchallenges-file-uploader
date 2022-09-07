@@ -1,8 +1,19 @@
-import { useContext } from "react";
+import { ChangeEvent, useContext } from "react";
 import { UIContext } from "../../context";
+import { useUploadImage } from "../../hooks/useUploadImage";
 
 export const FileUploaderButton = () => {
   const { isDragging } = useContext(UIContext);
+
+  const { setFile } = useUploadImage();
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { files } = event.target
+
+    if (!files || files.length === 0) return
+
+    setFile(files[0])
+  }
 
   return (
     <>
@@ -11,6 +22,7 @@ export const FileUploaderButton = () => {
         type="file"
         hidden
         accept="image/png, image/jpeg, image/gif"
+        onChange={handleChange}
       />
       <label
         htmlFor="choose-file"

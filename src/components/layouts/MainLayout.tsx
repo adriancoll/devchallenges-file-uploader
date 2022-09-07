@@ -1,20 +1,29 @@
 import { FC, PropsWithChildren } from "react";
 
 interface Props extends PropsWithChildren {
-  wrapperClassName?: string
+  wrapperClassName?: string;
+  animated?: boolean;
 }
 
-export const MainLayout: FC<Props> = ({ children, wrapperClassName = "" }) => {
+export const MainLayout: FC<Props> = ({
+  children,
+  wrapperClassName = "",
+  animated = true,
+}) => {
   return (
     <>
-      <main className="flex items-center justify-center h-screen w-full bg-gray-100">
+      <main
+        className="flex items-center justify-center h-screen w-full bg-gray-100"
+      >
         <div
           style={{
             boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
             lineHeight: "27px",
             color: "#4F4F4F",
           }}
-          className={`px-8 min-w-[340px] py-9 bg-white flex flex-col rounded-xl justify-between gap-6 ${wrapperClassName}`}
+          className={`px-8 min-w-[340px] py-9 bg-white flex flex-col rounded-xl justify-between gap-6 ${wrapperClassName} ${
+            animated ? "animate-fade-in-up" : ""
+          }`}
         >
           {children}
         </div>

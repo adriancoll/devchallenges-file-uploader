@@ -2,12 +2,12 @@ import { createContext } from "react";
 
 export interface UIContextProps {
   // states
-  isUploading: boolean;
   isDragging: boolean;
+  currentImage: string;
 
   // Methods
-  setIsUploading: (payload: boolean) => void;
   setIsDragging: (payload: boolean) => void;
+  setCurrentImage: (payload: string) => void;
 }
 
 export const UIContext = createContext({} as UIContextProps);
