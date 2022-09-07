@@ -6,3 +6,6 @@ export * from "./FileUploaderButton";
 
 // Droppable
 export * from "./Droppable";
+
+// ProgressBar
+export * from "./ProgressBar";
